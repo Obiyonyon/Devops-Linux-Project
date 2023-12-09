@@ -2,8 +2,15 @@
 
 ## File Manipulation
 
-### Sudo (Superuser do)
+### 1. Sudo (Superuser do)
 
 Functions: Require to perform task that requires admin or root permissions and access.
 
 ![Alt text](<Images/Screenshot 2023-12-04 184505.png>)
+
+### 2. Create pwd command
+
+Functions: Required to find the path for the folder, file or application current/parent working directory or path.
+
+
+![Alt text](<Images/Screenshot 2023-12-09 134841.png>)
