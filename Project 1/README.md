@@ -20,3 +20,10 @@ Functions: Required to find the path for the folder, file or application current
 Functions: required to navigate through files and directory, depends on the current directory.
 
 ![Alt text](<Images/Screenshot 2023-12-09 140209.png>)
+
+### 4. Create ls command
+
+Functions: required to list the item in the directory or contents
+The current working directoru is REPOSITORIES\Devops-Linux-Project
+
+![Alt text](<Images/Screenshot 2023-12-09 140634.png>)
