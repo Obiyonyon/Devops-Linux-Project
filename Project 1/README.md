@@ -23,7 +23,13 @@ Functions: required to navigate through files and directory, depends on the curr
 
 ### 4. Create ls command
 
-Functions: required to list the item in the directory or contents
+Functions: required to list the item in the directory or contents.
 The current working directoru is REPOSITORIES\Devops-Linux-Project
 
 ![Alt text](<Images/Screenshot 2023-12-09 140634.png>)
+
+### 5. Create cat command -> Concatenate
+
+Functions: Requires to list, combine file content to the standard output and can merge files to another file.
+
+![Alt text](<Images/Screenshot 2023-12-09 141635.png>)
