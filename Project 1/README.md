@@ -14,3 +14,9 @@ Functions: Required to find the path for the folder, file or application current
 
 
 ![Alt text](<Images/Screenshot 2023-12-09 134841.png>)
+
+### 3. Create cd command
+
+Functions: required to navigate through files and directory, depends on the current directory.
+
+![Alt text](<Images/Screenshot 2023-12-09 140209.png>)
