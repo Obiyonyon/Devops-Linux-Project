@@ -33,3 +33,10 @@ The current working directoru is REPOSITORIES\Devops-Linux-Project
 Functions: Requires to list, combine file content to the standard output and can merge files to another file.
 
 ![Alt text](<Images/Screenshot 2023-12-09 141635.png>)
+
+### 6. cp:
+Cp is used to copy files or directories, this is majorly used every single day and almost every seconds to copy and paste text, files and folders.
+
+MV is used to move files/folders and text from one location to another.
+
+![Alt text](<Images/Screenshot 2023-12-09 142825.png>)
