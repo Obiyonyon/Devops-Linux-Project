@@ -31,8 +31,7 @@ The current working directoru is REPOSITORIES\Devops-Linux-Project
 ### 5. Create cat command -> Concatenate
 
 Functions: Requires to list, combine file content to the standard output and can merge files to another file.
-
-![Alt text](<Images/Screenshot 2023-12-09 141635.png>)
+![Alt text](<Images/Screenshot 2023-12-10 101522.png>)
 
 ### 6. cp:
 Cp is used to copy files or directories, this is majorly used every single day and almost every seconds to copy and paste text, files and folders.
