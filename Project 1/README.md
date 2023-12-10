@@ -38,4 +38,4 @@ Cp is used to copy files or directories, this is majorly used every single day a
 
 MV is used to move files/folders and text from one location to another.
 
-![Alt text](<Images/Screenshot 2023-12-09 142825.png>)
+![Alt text](<Images/Screenshot 2023-12-10 104003.png>)
