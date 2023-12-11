@@ -56,3 +56,11 @@ Run mkdir directoryFolder
 To make sub directory inside directory folder as shown above, do:
 
 ![Alt text](<Images/Screenshot 2023-12-11 192811.png>)
+
+### 9. rmdir,rm:
+
+Rmdir is basically used to remove or permanently delete an empty director or path folder., Users must have some sudo priviledges to perform this action.
+
+Rm command is basically to delete files within some directory and users performing this actions should have write permissions too
+
+![Alt text](<Images/Screenshot 2023-12-11 200448.png>)
