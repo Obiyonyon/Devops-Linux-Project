@@ -39,3 +39,11 @@ Cp is used to copy files or directories, this is majorly used every single day a
 MV is used to move files/folders and text from one location to another.
 
 ![Alt text](<Images/Screenshot 2023-12-10 104003.png>)
+
+### 7. Mv:
+
+MV is used to move files/folders and text from one location to another.
+
+Adding flag -R copies/moves the entire directory, depending on the if you're copying or moving files, folders or text.
+
+![Alt text](<Images/Screenshot 2023-12-11 192210.png>)
