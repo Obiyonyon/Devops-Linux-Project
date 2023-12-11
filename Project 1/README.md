@@ -47,3 +47,12 @@ MV is used to move files/folders and text from one location to another.
 Adding flag -R copies/moves the entire directory, depending on the if you're copying or moving files, folders or text.
 
 ![Alt text](<Images/Screenshot 2023-12-11 192210.png>)
+
+### 8. Create mkdir is used to create 1 or multiple directories/folders, which also set permissions for each of them.
+
+Functions: Required to make directory.
+
+Run mkdir directoryFolder
+To make sub directory inside directory folder as shown above, do:
+
+![Alt text](<Images/Screenshot 2023-12-11 192811.png>)
