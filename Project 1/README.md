@@ -111,3 +111,9 @@ History the system will list upto 500 previously executed commands, allowing you
 Only users with SUDO priviledges can execute this command History [option]
 man prides user manual of any commands or utilities you can run in a terminal, including the name, description and options etc. man [command_name] man ls man [option] [section_number] [command_name] etc
 
+
+### 13. echo command
+
+Echo is used to display line of text, echo is a syntax of PHP backend language too.
+
+![Alt text](<Images/Screenshot 2023-12-12 161639.png>)
