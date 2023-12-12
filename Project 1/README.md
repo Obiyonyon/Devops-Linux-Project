@@ -88,3 +88,26 @@ DIff as the name impless is difference to look for something.
 Tar is used for archive files into a TAR format, somehow like ZIP etc.
 
 ![Alt text](<Images/Screenshot 2023-12-12 153941.png>)
+
+### 12. File Permission and Ownership
+
+chmod, chown, jobs, kill, ping, wget, uname, top, history, man, Echo: Chmod from the name means to change mode, used to change access permission and the special mode flags of the system ojects Chmod also modifies files or directory's read and wite, execute permissions. Each file is associated with 3 user classes - owner, group and others.
+
+Chown is used to modify or change owner of directory or file.
+
+Jobs used to display all the running processes along with their statuses, it's only available in csh, bash etc.
+
+Kill used to terminate unresponsive apps or freezing apps. You have to know the process ID number to terminate and run the command.
+
+ping is used to to check wether network or signal is reachable. You can always ping any IP address.
+
+wget this allows files download from the internet, it usually works in the background, it recieves files using HTTPS, HTTP and FTP protocols. wget [option] URL uname this print detailed info about your linux system and hardware, such as MAchine name, OS, kernetl etc. uname -a
+
+Top displays all the running processes and a dynamic real time viiew of the current system. Sums up resource utilization from the CPU to memory usage.
+
+it can be used to terminate apps using too much resources and slwoing the system. Top
+History the system will list upto 500 previously executed commands, allowing you to reuse them without re-entering.
+
+Only users with SUDO priviledges can execute this command History [option]
+man prides user manual of any commands or utilities you can run in a terminal, including the name, description and options etc. man [command_name] man ls man [option] [section_number] [command_name] etc
+
