@@ -64,3 +64,13 @@ Rmdir is basically used to remove or permanently delete an empty director or pat
 Rm command is basically to delete files within some directory and users performing this actions should have write permissions too
 
 ![Alt text](<Images/Screenshot 2023-12-11 200448.png>)
+
+### 10 touch, locate, find, grep:
+
+Touch command is used to create a new file that is empty or also mofidy and generate a timestamp in linux cmd.
+
+Find command is used to search for documents within specific directory or folders and perform operations. //[find] [option] [path] [expression]
+
+Grep command is an acronym for global expression print used to find words by search all text in documents.
+
+![Alt text](<Images/Screenshot 2023-12-12 152504.png>)
