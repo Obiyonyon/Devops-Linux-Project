@@ -74,3 +74,17 @@ Find command is used to search for documents within specific directory or folder
 Grep command is an acronym for global expression print used to find words by search all text in documents.
 
 ![Alt text](<Images/Screenshot 2023-12-12 152504.png>)
+
+### 11 df, du, head, tail, diff, tar:
+
+DU is used to also check how much a folder or file is taking or using.
+
+Head is used to show the first ten lines of a file
+
+TAIL is to check the last ten lines in a file, just as the name implies, Tail -something like end.
+
+DIff as the name impless is difference to look for something.
+
+Tar is used for archive files into a TAR format, somehow like ZIP etc.
+
+![Alt text](<Images/Screenshot 2023-12-12 153941.png>)
