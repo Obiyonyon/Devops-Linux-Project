@@ -117,3 +117,9 @@ man prides user manual of any commands or utilities you can run in a terminal, i
 Echo is used to display line of text, echo is a syntax of PHP backend language too.
 
 ![Alt text](<Images/Screenshot 2023-12-12 161639.png>)
+
+### 14. Zip, Unzip, hostname, useradd, userdel, apt-get, nano, vi, jed, alias, unalias, su, htop, ps:
+
+Zip is is used to compress files and folders to preferred ZIP file zip is also useful for archiving files.
+
+![Alt text](<Images/Screenshot 2023-12-12 170517.png>)
