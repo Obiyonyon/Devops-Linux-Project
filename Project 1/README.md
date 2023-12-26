@@ -122,4 +122,4 @@ Echo is used to display line of text, echo is a syntax of PHP backend language t
 
 Zip is is used to compress files and folders to preferred ZIP file zip is also useful for archiving files.
 
-![Alt text](<Images/Screenshot 2023-12-12 170517.png>)
+
