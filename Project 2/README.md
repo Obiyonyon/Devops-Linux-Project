@@ -7,3 +7,7 @@ Initializing a git repository
 # Making commit
 
 ![Alt text](<Screenshot 2023-12-27 174428.png>)
+
+# Making your first git branch
+
+![Alt text](<Screenshot 2023-12-27 195444.png>)
