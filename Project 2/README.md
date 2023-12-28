@@ -11,3 +11,7 @@ Initializing a git repository
 # Making your first git branch
 
 ![Alt text](<Screenshot 2023-12-27 195444.png>)
+
+# Merging branches
+
+![Alt text](<Screenshot 2023-12-28 134323.png>)
