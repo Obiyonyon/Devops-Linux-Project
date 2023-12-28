@@ -13,5 +13,8 @@ Initializing a git repository
 ![Alt text](<Screenshot 2023-12-27 195444.png>)
 
 # Merging branches
+![Alt text](<Screenshot 2023-12-28 141550.png>)
 
-![Alt text](<Screenshot 2023-12-28 134323.png>)
+# Deleting a branch
+
+![Alt text](<Screenshot 2023-12-28 141826.png>)
