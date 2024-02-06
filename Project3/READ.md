@@ -7,3 +7,7 @@
 using the Private key and public key
 
 ![Alt text](<Screenshot 2024-01-20 173101.png>)
+
+### Installing Apache
+
+![Alt text](<Screenshot 2024-02-06 194016.png>)
