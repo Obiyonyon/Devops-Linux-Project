@@ -11,3 +11,7 @@ using the Private key and public key
 ### Installing Apache
 
 ![Alt text](<Screenshot 2024-02-06 194016.png>)
+
+### URL in my browser displayed Apache default page
+
+![alt text](<Screenshot 2024-02-07 170213.png>)
