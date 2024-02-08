@@ -15,3 +15,11 @@ using the Private key and public key
 ### URL in my browser displayed Apache default page
 
 ![alt text](<Screenshot 2024-02-07 170213.png>)
+
+### MYSQL Installed
+
+![alt text](<Screenshot 2024-02-08 171653.png>)
+
+### PHP Installed
+
+![alt text](<Screenshot 2024-02-08 162242.png>)
