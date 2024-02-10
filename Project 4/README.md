@@ -19,3 +19,5 @@ Using the ip address
 ### Installing MySQL
 
 ![alt text](<Images/Screenshot 2024-02-09 200916.png>)
+
+![alt text](<Images/Screenshot 2024-02-10 135828.png>)
