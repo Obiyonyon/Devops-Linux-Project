@@ -30,4 +30,3 @@ Using the ip address
 
 ![alt text](<Images/Screenshot 2024-02-10 183920.png>)
 
-[text](README.md)
