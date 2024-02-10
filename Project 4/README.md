@@ -26,6 +26,8 @@ Using the ip address
 
 ![alt text](<Images/Screenshot 2024-02-10 181105.png>)
 
+### Testing PHP with Nginx
+
 ![alt text](<Images/Screenshot 2024-02-10 183920.png>)
 
 [text](README.md)
