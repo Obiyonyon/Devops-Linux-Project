@@ -2,7 +2,7 @@
 
 ![alt text](<Images/Screenshot 2024-02-09 182415.png>)
 
-### Connecting to LEMP-SERVER via Gitbash
+### Connecting to LEMP-SERVER using SSH Gitbash
 
 ![alt text](<Images/Screenshot 2024-02-09 194803.png>)
 
@@ -21,3 +21,7 @@ Using the ip address
 ![alt text](<Images/Screenshot 2024-02-09 200916.png>)
 
 ![alt text](<Images/Screenshot 2024-02-10 135828.png>)
+
+### Configuring Nginx to use PHP Processor
+
+![alt text](<Images/Screenshot 2024-02-10 181105.png>)
