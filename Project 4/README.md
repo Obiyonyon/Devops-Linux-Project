@@ -25,3 +25,7 @@ Using the ip address
 ### Configuring Nginx to use PHP Processor
 
 ![alt text](<Images/Screenshot 2024-02-10 181105.png>)
+
+![alt text](<Images/Screenshot 2024-02-10 183920.png>)
+
+[text](README.md)
