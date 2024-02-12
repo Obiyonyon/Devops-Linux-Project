@@ -38,3 +38,5 @@ Using the ip address
 
 ![alt text](<Images/Screenshot 2024-02-12 185101.png>)
 
+![alt text](<Images/Screenshot 2024-02-12 185601.png>)
+
