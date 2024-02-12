@@ -30,3 +30,11 @@ Using the ip address
 
 ![alt text](<Images/Screenshot 2024-02-10 183920.png>)
 
+### Retrieving data from MySQL database with PHP
+
+(<Images/Screenshot 2024-02-12 184357.png>)
+
+### MySQL Console
+
+![alt text](<Images/Screenshot 2024-02-12 185101.png>)
+
