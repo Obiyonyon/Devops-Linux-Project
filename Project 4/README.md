@@ -32,7 +32,7 @@ Using the ip address
 
 ### Retrieving data from MySQL database with PHP
 
-(<Images/Screenshot 2024-02-12 184357.png>)
+![alt text](<Images/Screenshot 2024-02-12 184357.png>)
 
 ### MySQL Console
 
