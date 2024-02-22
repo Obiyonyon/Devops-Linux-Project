@@ -1,12 +1,21 @@
 #!/bin/bash
-# Example script to check if a number is positive, negative, or zero
 
-read -p "Enter a number: " num
+#Installing Web Server Dependencies
+echo "#############################"
+echo "Installing Dependencies"
+echo "#############################"
+apt update -y > /dev/null
+apt install -y wget unzip apache2 > /dev/null
+echo
 
-if [ $num -gt 0 ]; then
-    echo "The number is positive."
-elif [ $num -lt 0 ]; then
-    echo "The number is negative."
-else
-    echo "The number is zero."
-fi
+#Create directory
+echo "#############################"
+echo "Create directory"
+echo "#############################"
+mkdir -p /tmp/webfiles
+cd  /tmp/webfiles
+
+wget https://www.tooplate.com/zip-templates/2106_soft_landing.zip > /dev/null
+unzip 2106_soft_landing.zip > /dev/null
+cp -r  2106_soft_landing/* /var/www/html/
+echo
