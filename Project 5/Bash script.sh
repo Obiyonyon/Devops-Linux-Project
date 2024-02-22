@@ -19,3 +19,10 @@ wget https://www.tooplate.com/zip-templates/2106_soft_landing.zip > /dev/null
 unzip 2106_soft_landing.zip > /dev/null
 cp -r  2106_soft_landing/* /var/www/html/
 echo
+
+# Prompt the user for their name
+echo "Enter your name:"
+read name
+
+# Display a greeting with the entered name
+echo "Hello, $name! Nice to meet you."
