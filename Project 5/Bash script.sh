@@ -104,8 +104,8 @@ echo "Number 1 raised to the power of 2: $power_of_2"
 echo "Square root of number 2: $square_root"
 
 # Define the source directory and backup directory
-source_dir="/path/to/source_directory"
-backup_dir="/path/to/backup_directory"
+source_dir="/home/ubuntu/Shell_script"
+backup_dir="/home/ubuntu/backup/"
 
 # Create a timestamp with the current date and time
 timestamp=$(date +"%Y%m%d%H%M%S")

@@ -25,4 +25,6 @@ This script defines two variables num1 and num2 with numeric values, performs ba
 
 This script defines the source directory and backup directory paths. It then creates a timestamp using the current date and time, and creates a backup directory with the timestamp appended to its name. Then copies all files from the source directory to backup directory using the cp command with the -r option for recursive copying. Finally, it displays a message indicating the completion of the backup process and shows the path of the backup directory with the timestamp.
 
-![alt text](<images/Screenshot 2024-02-22 125545.png>)
+![alt text](<images/Screenshot 2024-02-25 160043.png>)
+
+![alt text](<images/Screenshot 2024-02-25 160136.png>)
