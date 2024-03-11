@@ -53,3 +53,17 @@ sudo vi index.html
 Change file ownership of the index.html file with command below:
 
    sudo chown www-data:www-data ./index.html
+
+   ## Overriding the default html file of Apache webserver
+
+   * Replace the default html file with our new hmtl file using the command below:
+
+   sudo cp -f ./index.html /var/www/html/index.html
+
+   Restart the webserver to load the new configuration using the command below:
+
+   sudo systemctl restart apache2
+
+![alt text](<Images/Screenshot 2024-03-11 201027.png>)
+
+
