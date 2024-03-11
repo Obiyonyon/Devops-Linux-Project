@@ -29,3 +29,7 @@ Add a new listen directive for port 8000
 ![alt text](<Images/Screenshot 2024-03-11 182352.png>)
 
 Next open the file /etc/apache2/sites-available/000-default.conf and change port 80 on virtualhost to 8000.
+
+(<Images/Screenshot 2024-03-11 184848.png>)
+
+Restart apache to load the new configuration using the comman below
