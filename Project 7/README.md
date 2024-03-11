@@ -30,6 +30,26 @@ Add a new listen directive for port 8000
 
 Next open the file /etc/apache2/sites-available/000-default.conf and change port 80 on virtualhost to 8000.
 
-(<Images/Screenshot 2024-03-11 184848.png>)
+![alt text](<Images/Screenshot 2024-03-11 184848.png>)
 
-Restart apache to load the new configuration using the comman below
+Restart apache to load the new configuration using the comman below:
+
+sudo systemctl restart apache2
+
+## Create a new html file
+sudo vi index.html
+
+     <!DOCTYPE html>
+        <html>
+        <head>
+            <title>My EC2 Instance</title>
+        </head>
+        <body>
+            <h1>Welcome to my EC2 instance</h1>
+            <p>Public IP: YOUR_PUBLIC_IP</p>
+        </body>
+        </html>
+
+Change file ownership of the index.html file with command below:
+
+   sudo chown www-data:www-data ./index.html
