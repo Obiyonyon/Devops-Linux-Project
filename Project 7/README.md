@@ -5,5 +5,3 @@ Install Apache webserver in them.
 Open port 8000 to allow traffic from anywhere
 Update the default page of webservers to display IP addresses.
 
-sudo apt update -y && sudo apt upgrade -y
-sudo apt install mysql-client -y
