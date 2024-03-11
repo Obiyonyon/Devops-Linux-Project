@@ -11,6 +11,6 @@ Open port 8000 we will be running webservers on port 8000, while the load balanc
 
 Install Apache
 
-(<Images/Screenshot 2024-03-11 180057.png>)
+![alt text](<Images/Screenshot 2024-03-11 180057.png>)
 
 ![alt text](<Images/Screenshot 2024-03-11 180150.png>)
