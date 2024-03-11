@@ -16,7 +16,9 @@ Open port 8000 we will be running webservers on port 8000, while the load balanc
 ![alt text](<Images/Screenshot 2024-03-11 180150.png>)
 
 ## Configure Apache to server page showing its public IP:
-We, will start by configuring Apache webserver, to serve content on port 8000 instead of its default which is port 80. Then we will create a new index.html file.
+We, will start by configuring Apache webserver, to serve content on port 8000 instead of its default which is port 80. 
+
+Then we will create a new index.html file.
 The file will, contain code to display the public IP of the EC2 instance. We will then override apache webserver's default html file with our new file.
 
 ### Configuring Apache to serve content on port 8000
