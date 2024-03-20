@@ -46,7 +46,7 @@ sudo vi index.html
         </head>
         <body>
             <h1>Welcome to my EC2 instance</h1>
-            <p>Public IP: YOUR_PUBLIC_IP</p>
+            <p>We swiftly analyze information</p>
         </body>
         </html>
 
@@ -66,4 +66,49 @@ Change file ownership of the index.html file with command below:
 
 ![alt text](<Images/Screenshot 2024-03-11 201027.png>)
 
+## Configuring Nginx as a load balancer
 
+* Launch a new EC2 instance running unbuntu 22.04.
+* Make sure port 80 is opened to accept traffic from anywhere
+* Install Nginx 
+
+![alt text](<Images/Screenshot 2024-03-11 202022.png>)
+
+![alt text](<Images/Screenshot 2024-03-11 202054.png>)
+
+Open Nginx configuration file with the command below:
+sudo vi /etc/nginx/conf.d/loadbalancer.conf
+
+
+        
+        upstream backend_servers {
+
+            # your are to replace the public IP and Port to that of your webservers
+            server 127.0.0.1:8000; # public IP and port for webserser 1
+            server 127.0.0.1:8000; # public IP and port for webserver 2
+
+        }
+
+        server {
+            listen 80;
+            server_name <your load balancer's public IP addres>; # provide your load balancers public IP address
+
+            location / {
+                proxy_pass http://backend_servers;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            }
+        }
+    
+* Test your configuration with the command below:
+
+sudo nginx -t
+
+![alt text](<Images/Screenshot 2024-03-11 202544.png>)
+
+* If there are no errors, restart Nginx to load the new configuration with the command below:
+
+sudo systemctl restart nginx
+
+![alt text](<Images/Screenshot 2024-03-20 131723.png>)
