@@ -28,14 +28,14 @@ sudo vi install.sh
 ####################################################################################################################
 ##### This automates the installation and configuring of apache webserver to listen on port 8000
 ##### Usage: Call the script and pass in the Public_IP of your EC2 instance as the first argument as shown below:
-######## ./install_configure_apache.sh 127.0.0.1
+######## ./install_configure_apache.sh 18.234.230.94
 ####################################################################################################################
 
 set -x # debug mode
 set -e # exit the script if there is an error
 set -o pipefail # exit the script when there is a pipe failure
 
-PUBLIC_IP=$1
+PUBLIC_IP=18.234.230.94
 
 [ -z "${PUBLIC_IP}" ] && echo "Please pass the public IP of your EC2 instance as an argument to the script" && exit 1
 
@@ -58,7 +58,7 @@ echo "<!DOCTYPE html>
             <title>My EC2 Instance</title>
         </head>
         <body>
-            <h1>Welcome to my EC2 instance</h1>
+            <h1>Welcome to my 1st Web Server EC2 instance</h1>
             <p>Public IP: "${PUBLIC_IP}"</p>
         </body>
         </html>" > /var/www/html/index.html
