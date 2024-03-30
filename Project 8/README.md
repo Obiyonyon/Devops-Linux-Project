@@ -151,3 +151,12 @@ sudo chmod +x install.sh
 http://public_ip_address_of_web_server_1:8000
 
 ![alt text](<Images/Screenshot 2024-03-30 181530.png>)
+
+
+# Deploying and Configuring Nginx Load Balancer.
+
+* Provision an EC2 Instance for the Load Balancer
+
+* Inbound Rules: Allow Traffic From Anywhere On Port 80 and Port 22.
+
+![alt text](<Images/Screenshot 2024-03-30 183608.png>)
