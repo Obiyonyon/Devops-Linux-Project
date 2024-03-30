@@ -245,4 +245,5 @@ sudo chmod +x nginx.sh
 http://public_ip_address_of_load_balancer:80
 
 ![alt text](<Images/Load Balancer 1.png>)
+
 ![alt text](<Images/Load Balancer 2 .png>)
