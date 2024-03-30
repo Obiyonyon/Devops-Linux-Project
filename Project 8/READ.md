@@ -10,3 +10,12 @@ We will be writing a script that automates the installation and configuration of
 
 We will also be writing another script that automates the configuration of Nginx to act as a load balancer. It does this by installing Nginx, creating a new configuration file, and modifying it to specify the upstream servers and configure Nginx to listen on port 80. It then tests the configuration and restarts the Nginx service.
 
+# Deploying and configuring web servers
+* Provision an EC2 instance running ubuntu 20.04.
+* Inbound Rules: Allow Traffic From Anywhere On Port 8000 and Port 22.
+
+![alt text](<Images/Screenshot 2024-03-30 154626.png>)
+
+Connect to the 1st Web Server via the terminal
+
+![alt text](<Images/Screenshot 2024-03-30 161924.png>)
