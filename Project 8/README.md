@@ -67,6 +67,20 @@ echo "<!DOCTYPE html>
 
 sudo systemctl restart apache2
 
+* Assign executable permissions on the file using the command shown below:
+
+sudo chmod +x install.sh
+
+* Run the shell script using the command shown below:
+
+./install.sh
+
+* Go to your web browser and paste the following URL to verify the setup:
+
+http://public_ip_address_of_web_server_1:8000
+
+![alt text](<Images/Screenshot 2024-03-30 182527.png>)
+
 Provision an EC2 Instance for the 2nd Web Server
 * Inbound Rules: Allow Traffic From Anywhere On Port 8000 and Port 22.
 
