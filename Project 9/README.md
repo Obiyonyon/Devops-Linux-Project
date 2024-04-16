@@ -39,7 +39,9 @@ Requirements:
 
 ## Creating And Mounting New Volumes
 
-+ Create and attach a new volume to your Linux server.
++ Create and attach a new volume to your Linux 
+server.
+
 ![alt text](<Images/Screenshot 2024-04-16 112530.png>)
 
 **Note:** Ensure that the availability zone of your volume must be the same as your Linux server.
