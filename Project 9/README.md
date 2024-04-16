@@ -34,3 +34,5 @@ Requirements:
 + A Laptop or PC to serve as a client
 + An EC2 Linux Server as a web server (This is where you will install WordPress).
 + An EC2 Linux server as a database (DB) server
+
+**Note:** We are using RedHat OS for this project, you should be able to spin up an EC2 instance on your own. Also when connecting to RedHat you will need to use ec2-user user. Connection string will look like ec2-user@public-ip-address.
