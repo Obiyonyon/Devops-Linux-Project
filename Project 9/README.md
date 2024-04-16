@@ -36,3 +36,11 @@ Requirements:
 + An EC2 Linux server as a database (DB) server
 
 **Note:** We are using RedHat OS for this project, you should be able to spin up an EC2 instance on your own. Also when connecting to RedHat you will need to use ec2-user user. Connection string will look like ec2-user@public-ip-address.
+
+## Creating And Mounting New Volumes
+
++ Create and attach a new volume to your Linux server.
+
+![alt text](<Images/Screenshot 2024-04-16 113450.png>)
+
+**Note:** Ensure that the availability zone of your volume must be the same as your Linux server.
