@@ -1,10 +1,10 @@
-# Implementing Wordpress Website with LVM Storage Manager
+# Implementing Wordpress Website With LVM Storage Manager
 
 WordPress is a content management system (CMS) that allows you to host and build websites. WordPress contains plugin architecture and a template system, so you can customize any website to fit your business, blog, portfolio, or online store. The focus is not on how to build websites with wordpress.
 
 But to prepare storage infrastructure on two Linux servers and implement a basic web solution using WordPress. WordPress is a free and open-source content management system written in PHP and paired with MySQL or MariaDB as its backend Relational Database Management System (RDBMS).
 
-## This project consist of two parts:
+## This Project Consist Of Two Parts:
 + Configure storage subsystem for Web and Database servers based on Linux OS.
  The focus of this part is to give you practical experience of working with disks, partitions and volumes in Linux.
 
@@ -12,7 +12,7 @@ But to prepare storage infrastructure on two Linux servers and implement a basic
 
 As a DevOps engineer, a deep understanding of core components of web solutions and the ability to troubleshoot them will play essential role in your further progress and development.
 
-## Three tier architecture
+## Three Tier Architecture
 
 Generally, web, or mobile solutions are implemented based on what is called the Three-tier Architecture.
 
@@ -28,3 +28,9 @@ Three-tier Architecture is a client-server software architecture pattern that co
 With this project, you will have the hands-on experience that showcases Three-tier Architecture while also ensuring that the disks used to store files on the Linux servers are adequately partitioned and managed through programs such as gdisk and LVM respectively.
 
 Requirements:
+
+## Your 3-Tier Setup
+
++ A Laptop or PC to serve as a client
++ An EC2 Linux Server as a web server (This is where you will install WordPress).
++ An EC2 Linux server as a database (DB) server
