@@ -71,3 +71,57 @@ sudo gdisk /dev/xvdb.
 
 Install lvm2 package using sudo yum install lvm2 -y  
 Run sudo lvmdiskscan command to check for available partitions.
+
+Verify that your Physical volume has been created successfully by running sudo pvs.
+
+![alt text](<Images/Screenshot 2024-04-17 170002.png>)
+
+Use vgcreate utility to add all 3 PVs to a volume group(VG).Name the VG webdata-vg.
+
+Verify that your VG has been created successfully by running sudo vgs
+
+![alt text](<Images/Screenshot 2024-04-17 225607.png>)
+
+Use lvcreate utility to create 2 logical volumes.apps -lv (use half of the PV size), and logs -lv. Use the remain space of the PV size. Note apps-lv will be used to store data for the website while, log-lv will be used to store data for logs.
+
+sudo lvcreate -n apps-lv -L 14G webdata-vg
+
+sudo lvcreate -n logs-lv -L 14G webdata-vg
+
+Verify that your logical volume has been created successfully by running sudo lvs
+
+![alt text](<Images/Screenshot 2024-04-17 230850.png>)
+
+Verify the entire setup
+
+sudo vgdisplay -v #view complete setup - VG, PV, and LV
+
+sudo lsblk
+
+![alt text](<Images/Screenshot 2024-04-17 231831.png>)
+
+Use mkfs.ext4 to format the logical volume with ext4 filesystem.
+sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
+
+sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
+
+Create **/var/www/html** directory to store website files 
+
+sudo mkdir -p /var/www/html
+
+Create **/home/recovery/logs** to store backup of log data
+
+sudo mkdir -p /home/recovery/logs
+
+Mount **/var/www/html** on apps-lv logical volume
+
+sudo mount /dev/webdata-vg/apps-lv /var/www/html/
+
+Use rsyn utility to backup all the files in the log directory **/var/log into /home/recovery/logs** *(This is required before mounting the file system)*.
+
+sudo rsync -av /var/log/. /home/recovery/logs/
+
+Mount **/var/log on logs-lv** logical volume. (Note that all the existing data on/var/log will be deleted).
+
+sudo mount /dev/webdata-vg/logs-lv /var/log
+
