@@ -1,6 +1,7 @@
 # Implementing Wordpress Website With LVM Storage Management.
 
-WordPress is a content management system (CMS) that allows you to host and build websites. WordPress contains plugin architecture and a template system, so you can customize any website to fit your business, blog, portfolio, or online store. The focus is not on how to build websites with wordpress.
+WordPress is a content management system (CMS) that allows you to host and build websites. WordPress contains plugin architecture   
+and a template system, so you can customize any website to fit your business, blog, portfolio, or online store. The focus is not on how to build websites with wordpress.
 
 But to prepare storage infrastructure on two Linux servers and implement a basic web solution using WordPress. WordPress is a free and open-source content management system written in PHP and paired with MySQL or MariaDB as its backend Relational Database Management System (RDBMS).
 
@@ -67,3 +68,6 @@ sudo gdisk /dev/xvdb.
 ![alt text](<Images/Screenshot 2024-04-17 134045.png>)
 
 ![alt text](<Images/Screenshot 2024-04-17 140035.png>)
+
+Install lvm2 package using sudo yum install lvm2 -y  
+Run sudo lvmdiskscan command to check for available partitions.
