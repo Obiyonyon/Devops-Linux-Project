@@ -45,3 +45,6 @@ server.
 ![alt text](<Images/Screenshot 2024-04-16 112530.png>)
 
 **Note:** Ensure that the availability zone of your volume must be the same as your Linux server.
+
+Attach all the three volumes one by one to your Web Server EC2 
+![alt text](<Images/Screenshot 2024-04-17 105117.png>)
