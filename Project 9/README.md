@@ -54,7 +54,7 @@ Attach all the three volumes one by one to your Web Server EC2
 Use lsblk command to inspect what block devices are attached to the server.
 
 Notices names of your newly created devices All devices in Linux resides in
-/dev/directory. Inspect it with ls/dev/ to see all 3 newly created block devices there. Their names will likely be xvdf, xvdh, xvdg.
+/dev/directory. Inspect it with ls/dev/ to see all 3 newly created block devices there. Their names will likely be xvdb, xvdc, xvdd.
 
 ![alt text](<Images/Screenshot 2024-04-17 105856.png>)
 
@@ -64,5 +64,6 @@ Notices names of your newly created devices All devices in Linux resides in
 sudo gdisk /dev/xvdb.
 
 ![alt text](<Images/Screenshot 2024-04-17 124326.png>)
+![alt text](<Images/Screenshot 2024-04-17 134045.png>)
 
-![alt text](<Images/Screenshot 2024-04-17 125013.png>)
+![alt text](<Images/Screenshot 2024-04-17 140035.png>)
