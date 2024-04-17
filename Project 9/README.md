@@ -49,7 +49,7 @@ server.
 Attach all the three volumes one by one to your Web Server EC2 
 ![alt text](<Images/Screenshot 2024-04-17 105117.png>)
 
- ### Open up the Linux terminal to begin configuration
+ ## Open up the Linux terminal to begin configuration
 
 Use lsblk command to inspect what block devices are attached to the server.
 Notices names of your newly created devices All devices in Linux resides in
