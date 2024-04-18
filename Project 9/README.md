@@ -125,3 +125,30 @@ Mount **/var/log on logs-lv** logical volume. (Note that all the existing data o
 
 sudo mount /dev/webdata-vg/logs-lv /var/log
 
+Restore log files back into **/var/log**  
+directorysudo rsync -av /home/recovery/logs/log/ /var/log
+
+Update /etc/fstab file so that the mount configuration will persist after restart of the server.
+
+The UUID of the device will be used to update the /etc/fstab file;
+
+sudo blkid
+
+![alt text](<Images/Screenshot 2024-04-18 120759.png>)
+
+
+sudo vi /etc/fstab
+
+Update /etc/fstab in this format using your own UUID and remember to remove the leading and ending quotes.
+
+![alt text](<Images/Screenshot 2024-04-18 123005.png>)
+
+Test the configuration and reload the daemon
+  
+sudo mount -a    
+
+sudo systemctl daemon-reload
+
+Verify your setup by running df -h, output must look like this:
+
+![alt text](<Images/Screenshot 2024-04-18 124009.png>)
