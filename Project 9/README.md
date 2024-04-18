@@ -152,3 +152,21 @@ sudo systemctl daemon-reload
 Verify your setup by running df -h, output must look like this:
 
 ![alt text](<Images/Screenshot 2024-04-18 124009.png>)
+
+# Installing wordpress and configuring to use MySQL Databse.
+
+Prepare the Database server
+
+Launch a second Redhat ec2 instance that will have a role -'DB Server' Repeat the same steps as for the web server, but instead of apps-lv create db-lv and mount it to /db directory instead of /var/www/html.
+
+
+Install wordpress on your web server EC2 
+
+Update the repository
+sudo yum -y update
+
+Install wget, Apache and it's dependencies
+
+sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json
+
+Start Apache
