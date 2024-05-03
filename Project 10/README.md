@@ -67,3 +67,10 @@ Esc + :wq!
 
 sudo exportfs -arv
 
+### 6. Check which port is used by NFS and open it using security groups (add new inbound rules).
+
+rpcinfo -p | grep nfs
+
+![alt text](<Images/Screenshot 2024-05-03 115429.png>)
+
+![alt text](<Images/Screenshot 2024-05-03 114534.png>)
