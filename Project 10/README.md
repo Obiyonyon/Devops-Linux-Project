@@ -12,4 +12,4 @@ A Network File System (NFS) allows remote hosts to mount file systems over a net
 
 * create mount points on /mnt directory for the logical volumes as follows: Mount apps-lv on /mnt/apps. logs-lv on /mnt/log opt-lv on /mnt/opt.
 
-
+![alt text](<Images/Screenshot 2024-05-03 090111.png>)
