@@ -31,7 +31,7 @@ sudo systemctl status nfs-server.service
 
 ### 3. Export the mounts for webservers Subnet cidr to connect as client.
 
-To check your > Subnet cidr - Open your EC2 details in AWS console and locate networking tab and open a Subnet link.
+To check your Subnet cidr - Open your EC2 details in AWS console and locate networking tab and open a Subnet link.
 
 ![alt text](<Images/Screenshot 2024-05-03 095958.png>)
 
@@ -61,7 +61,7 @@ sudo vi /etc/exports
 
 /mnt/opt-lv <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
 
-
+*Note* change the subnet-cidr to the IP address created.
 
 Esc + :wq!
 
