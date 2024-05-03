@@ -2,6 +2,8 @@
 
 A Network File System (NFS) allows remote hosts to mount file systems over a network and interact with those file systems as though they are mounted locally. This enables system administrators to consolidate resources onto centralized servers on the network.
 
+## 1. Prepare an NFS Server.
+
 * Spin up an EC2 instance with RHEL Linux 9 operating system.
 
 * Configure LVM on the server.
