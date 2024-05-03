@@ -2,7 +2,7 @@
 
 A Network File System (NFS) allows remote hosts to mount file systems over a network and interact with those file systems as though they are mounted locally. This enables system administrators to consolidate resources onto centralized servers on the network.
 
-## 1. Prepare an NFS Server.
+### 1. Prepare an NFS Server.
 
 * Spin up an EC2 instance with RHEL Linux 9 operating system.
 
@@ -17,7 +17,7 @@ A Network File System (NFS) allows remote hosts to mount file systems over a net
 ![alt text](<Images/Screenshot 2024-05-03 090111.png>)
 
 
-### Install NFS Server, configure to start on boot and make sure it's running.
+### 2. Install NFS Server, configure to start on boot and make sure it's running.
 
 sudo yum -y update 
 
@@ -28,3 +28,9 @@ sudo systemctl start nfs-server.service
 sudo systemctl enable nfs-server.service 
 
 sudo systemctl status nfs-server.service
+
+### 3. Export the mounts for webservers Subnet cidr to connect as client.
+
+To check your Subnet cidr - Open your EC2 details in AWS console and locate networking tab and open a Subnet link.
+
+![alt text](<Images/Screenshot 2024-05-03 095958.png>)
