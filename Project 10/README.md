@@ -1,6 +1,17 @@
 # Implementing a business website using NFS for backend storage.
 
-A Network File System (NFS) allows remote hosts to mount file systems over a network and interact with those file systems as though they are mounted locally. This enables system administrators to consolidate resources onto centralized servers on the network.
+A network file system (NFS) allows a user on a client computer to access files over a computer network much like local storage is accessed. NFS, like many other protocols, builds on the Open Network Computing Remote Procedure Call (ONC RPC) system.
+
+**Infrastructure:** AWS 
+
+**Webserver Linux:** Red Hat Enterprise Linux 8 
+
+**Database Server:** Ubuntu 20.04 + MySQL 
+
+**Storage Server:** Red Hat Enterprise Linux 8 + NFS Server 
+
+**Programming Language:** PHP
+**Code Repository:** Github
 
 ### 1. Prepare an NFS Server.
 
@@ -16,6 +27,13 @@ A Network File System (NFS) allows remote hosts to mount file systems over a net
 
 ![alt text](<Images/Screenshot 2024-05-03 090111.png>)
 
+* Mount the logical volumes to the directories we created earlier.
+
+![alt text](<Images/Screenshot 2024-05-03 171915.png>)
+
+* Verify that the logical volumes have been mounted successfully.
+
+![alt text](<Images/Screenshot 2024-05-03 172143.png>)
 
 ### 2. Install NFS Server, configure to start on boot and make sure it's running.
 
@@ -74,3 +92,5 @@ rpcinfo -p | grep nfs
 ![alt text](<Images/Screenshot 2024-05-03 115429.png>)
 
 ![alt text](<Images/Screenshot 2024-05-03 114534.png>)
+
+Note: For the NFS server to be accessible from your client, you must also open the following ports: TCP 111, UDP 111, and UDP 2049.
