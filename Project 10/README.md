@@ -110,8 +110,53 @@ Note: For the NFS server to be accessible from your client, you must also open t
 1. Create a new instance of ubuntu and ssh into it.
 
 ![alt text](<Images/Screenshot 2024-05-04 191059.png>)
-
 2. Install the MySQL server using the following 
 command:
 
+sudo apt install mysql-server
+
 ![alt text](<Images/Screenshot 2024-05-04 192126.png>)
+
+3. Create a database name called tooling
+
+sudo mysql 
+
+CREATE DATABASE tooling;
+
+![alt text](<Images/Screenshot 2024-05-04 200146.png>)
+
+4. Create a database user and name it webaccess
+
+CREATE USER 'webaccess'@'%' IDENTIFIED BY 'password';
+
+Note: The '%' should be replaced with the address of the subnet CIDR of your webservers.
+
+![alt text](<Images/Screenshot 2024-05-04 201954.png>)
+
+5. Grant the webaccess user all privileges on the tooling database.
+
+GRANT ALL PRIVILEGES ON tooling.* TO 'webaccess'@'%';
+
+![alt text](<Images/Screenshot 2024-05-04 202902.png>)
+
+6. Now we need to flush all privileges.
+
+FLUSH PRIVILEGES;
+
+![alt text](<Images/Screenshot 2024-05-04 203050.png>)
+
+7. Now let's show our databases and users.
+
+SHOW DATABASES;
+
+![alt text](<Images/Screenshot 2024-05-04 203242.png>)
+
+8. Now let's navigate to the tooling database and show tables.
+
+USE tooling; 
+
+SHOW TABLES;
+
+![alt text](<Images/Screenshot 2024-05-04 203451.png>)
+
+#  Configure the web servers
