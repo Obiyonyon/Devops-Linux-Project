@@ -25,7 +25,7 @@ A network file system (NFS) allows a user on a client computer to access files o
 
 * create mount points on /mnt directory for the logical volumes as follows: Mount apps-lv on /mnt/apps. logs-lv on /mnt/log opt-lv on /mnt/opt.
 
-![alt text](<Images/Screenshot 2024-05-03 090111.png>)
+![alt text](<Images/Screenshot 2024-05-03 180011.png>)
 
 * Mount the logical volumes to the directories we created earlier.
 
@@ -34,6 +34,14 @@ A network file system (NFS) allows a user on a client computer to access files o
 * Verify that the logical volumes have been mounted successfully.
 
 ![alt text](<Images/Screenshot 2024-05-03 172143.png>)
+
+* Update /etc/fstab file so that the mount configuration will persist after restart of the server.
+
+![alt text](<Images/Screenshot 2024-05-03 182953.png>)
+
+* Now we need to test the configurations and reload the daemon.
+
+![alt text](<Images/Screenshot 2024-05-03 183417.png>)
 
 ### 2. Install NFS Server, configure to start on boot and make sure it's running.
 
@@ -46,6 +54,8 @@ sudo systemctl start nfs-server.service
 sudo systemctl enable nfs-server.service 
 
 sudo systemctl status nfs-server.service
+
+![alt text](<Images/Screenshot 2024-05-03 183729.png>)
 
 ### 3. Export the mounts for webservers Subnet cidr to connect as client.
 
@@ -94,3 +104,14 @@ rpcinfo -p | grep nfs
 ![alt text](<Images/Screenshot 2024-05-03 114534.png>)
 
 Note: For the NFS server to be accessible from your client, you must also open the following ports: TCP 111, UDP 111, and UDP 2049.
+
+# Configure the database server
+
+1. Create a new instance of ubuntu and ssh into it.
+
+![alt text](<Images/Screenshot 2024-05-04 191059.png>)
+
+2. Install the MySQL server using the following 
+command:
+
+![alt text](<Images/Screenshot 2024-05-04 192126.png>)
