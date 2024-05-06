@@ -15,33 +15,92 @@ A network file system (NFS) allows a user on a client computer to access files o
 
 ### 1. Prepare an NFS Server.
 
-* Spin up an EC2 instance with RHEL Linux 9 operating system.
+* Spin up an EC2 instance with RHEL Linux 8 operating system.
 
 * Configure LVM on the server.
+* Use gdisk utility to create a single partition on 
+ each of the 3 disks.
 
-* Ensure there are 3 Logical Volumes. Iv-apps, lv-opt and lv -logs.
+ ![alt text](<Images/Screenshot 2024-05-06 115045.png>)
 
-* Format the disk as XFS.
+* Then install the lvm2 package using the following  
+command: sudo yum install lvm2
 
-* create mount points on /mnt directory for the logical volumes as follows: Mount apps-lv on /mnt/apps. logs-lv on /mnt/log opt-lv on /mnt/opt.
+* run the following command to check for available   
+  partitions: sudo lvmdiskscan.
 
-![alt text](<Images/Screenshot 2024-05-03 180011.png>)
+  ![alt text](<Images/Screenshot 2024-05-06 115730.png>)
+* Now after checking that there's no logical volume present, we need to create a physical volume on each of the 3 disks using the following command:
+sudo pvcreate
+
+![alt text](<Images/Screenshot 2024-05-06 170846.png>)
+
+* Now we need to verify that our physical volume has been created successfully using the following command:
+sudo pvs
+
+![alt text](<Images/Screenshot 2024-05-06 171210.png>)
+* Now we need to create a volume group using the vgcreate utility. We will use the 3 disks we created earlier to create a volume group called NFS-vg. 
+
+   sudo vgcreate nfs-vg /dev/xvdb1 /dev/xvdc1 /dev/xvdd1.
+![alt text](<Images/Screenshot 2024-05-06 173052.png>)
+
+* Use lvcreate utility to create 3 logical volumes. lv-opt lv-apps, and lv-logs. The lv-apps: would be used by the webservers, The lv-logs: would be used by web server logs, and the lv-opt: would be used by the Jenkins server.
+
+  sudo lvcreate -L 10G -n lv-opt nfs-vg 
+
+  sudo lvcreate -L 10G -n lv-apps nfs-vg 
+
+  sudo lvcreate -L 10G -n lv-logs nfs-vg
+
+  ![alt text](<Images/Screenshot 2024-05-06 174205.png>)
+
+* Now we need to verify that our logical volumes have been created successfully using the following command:
+sudo lvs
+
+![alt text](<Images/Screenshot 2024-05-06 174955.png>)
+
+* Verify the entire setup
+
+![alt text](<Images/Screenshot 2024-05-06 175320.png>)
+
+* Use mkfs.xfs to format the logical volumes with xfs filesystem.
+
+   sudo mkfs -t xfs /dev/nfs-vg/lv-opt 
+
+   sudo mkfs -t xfs /dev/nfs-vg/lv-apps
+
+   sudo mkfs -t xfs /dev/nfs-vg/lv-logs
+
+![alt text](<Images/Screenshot 2024-05-06 175713.png>)
+
+
+* Create a directory for each of the logical volumes.
+
+![alt text](<Images/Screenshot 2024-05-06 180458.png>)
 
 * Mount the logical volumes to the directories we created earlier.
 
-![alt text](<Images/Screenshot 2024-05-03 171915.png>)
+![alt text](<Images/Screenshot 2024-05-06 181130.png>)
 
-* Verify that the logical volumes have been mounted successfully.
+* Verify that the logical volumes have been mounted successfully. using the command: sudo df -h
 
-![alt text](<Images/Screenshot 2024-05-03 172143.png>)
+![alt text](<Images/Screenshot 2024-05-06 181509.png>)
 
-* Update /etc/fstab file so that the mount configuration will persist after restart of the server.
+* Now we need to make the mount persistent. To do that, we need to edit the /etc/fstab file and add the following lines: 
 
-![alt text](<Images/Screenshot 2024-05-03 182953.png>)
+  sudo blkid 
+
+  sudo vi /etc/fstab
+
+![alt text](<Images/Screenshot 2024-05-06 184448.png>)
 
 * Now we need to test the configurations and reload the daemon.
 
-![alt text](<Images/Screenshot 2024-05-03 183417.png>)
+  using this command: sudo mount -a 
+
+  sudo systemctl daemon-reload
+
+![alt text](<Images/Screenshot 2024-05-06 185015.png>)
 
 ### 2. Install NFS Server, configure to start on boot and make sure it's running.
 
@@ -160,3 +219,16 @@ SHOW TABLES;
 ![alt text](<Images/Screenshot 2024-05-04 203451.png>)
 
 #  Configure the web servers
+
+1. Create a new instance of RedHat and ssh into it.
+2. Install NFS client using the following command:
+
+sudo yum install -y nfs-utils nfs4-acl-tools
+
+![alt text](<Images/Screenshot 2024-05-05 135612.png>)
+
+3. Create a directory called /var/www/ and target the NFS server's export for apps.
+
+sudo mkdir /var/www 
+
+sudo mount -t nfs -o rw,nosuid 172.31.16.0:/mnt/apps-lv /var/www
