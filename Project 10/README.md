@@ -325,3 +325,26 @@ Note: If you encounter 403 Error – check permissions to your /var/www/html fol
 Now we need to update the website’s configuration to connect to the database (in /var/www/html/functions.php file).
 
 ![alt text](<Images/Screenshot 2024-05-08 122958.png>)
+
+Then we apply tooling-db.sql script to your database using this command:
+
+sudo yum install mysql -y 
+
+mysql -h private-ip-of-db -u webaccess -p tooling < tooling-db.sql
+
+Note: Ensure that you edit the /etc/mysql/mysql.conf.d/mysqld.cnf file to allow remote access to the database.
+
+![alt text](<Images/Screenshot 2024-05-08 130307.png>)
+
+Now we need to create in MySQL a new admin user  
+ with username: myuser and password: password:
+
+ ![alt text](<Images/Screenshot 2024-05-08 135357.png>)
+
+ Now we can then open the website in the browser and login with the new user.
+
+ ![alt text](<Images/Screenshot 2024-05-08 135505.png>)
+
+ Congratulations!
+
+You have just implemented a web solution using LAMP stack with remote Database and NFS server.
